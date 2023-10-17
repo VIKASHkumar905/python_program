@@ -1,0 +1,810 @@
+1.Python program to convert the temperature in degree centigrade to
+Fahrenheit.
+
+# Input from the user
+celsius = float(input("Enter the temperature in degrees Celsius: "))
+
+# Convert Celsius to Fahrenheit
+fahrenheit = (celsius * 9/5) + 32
+
+# Display the result
+print(f"{celsius} degrees Celsius is equal to {fahrenheit:.2f} degrees Fahrenheit.")
+
+ Output:- 
+Enter the temperature in degrees Celsius: 10
+10.0 degrees Celsius is equal to 50.00 degrees Fahrenheit.
+
+2.Python program to find the area of a triangle whose sides are given.
+
+
+# Three sides of the triangle is a, b and c:  
+a = float(input('Enter first side: '))  
+b = float(input('Enter second side: '))  
+c = float(input('Enter third side: '))  
+  
+# calculate the semi-perimeter  
+s = (a + b + c) / 2  
+  
+# calculate the area  
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5  
+print('The area of the triangle is %0.2f' %area) 
+
+Output:-
+Enter first side: 3
+Enter second side: 4
+Enter third side: 5
+The area of the triangle is 6.00
+
+3.  Python program to find the product of a set of real numbers.
+
+
+# Input from the user
+num_count = int(input("Enter the number of real numbers you want to multiply: "))
+
+# Initialize the product to 1
+product = 1
+
+# Loop to get real numbers and calculate their product
+for i in range(num_count):
+    num = float(input(f"Enter real number {i + 1}: "))
+    product *= num
+
+# Display the calculated product
+print(f"The product of the {num_count} real numbers is: {product}")
+
+Output:-
+Enter the number of real numbers you want to multiply: 7
+Enter real number 1: 8
+Enter real number 2: 4
+Enter real number 3: 3
+Enter real number 4: 1
+Enter real number 5: 2
+Enter real number 6: 7
+Enter real number 7: 8
+The product of the 7 real numbers is: 10752.0
+
+
+4. Python program to find the circumference and area of a circle with a given radius.
+
+import math
+
+# Input from the user
+radius = float(input("Enter the radius of the circle: "))
+
+# Calculate the circumference and area
+circumference = 2 * math.pi * radius
+area = math.pi * radius**2
+
+# Display the calculated values
+print(f"The circumference of the circle is: {circumference:.2f} units")
+print(f"The area of the circle is: {area:.2f} square units")
+
+Output:-
+Enter the radius of the circle: 4
+The circumference of the circle is: 25.13 units
+The area of the circle is: 50.27 square units
+
+5. Python program to check whether the given integer is a multiple of both 5
+and 7.
+
+# Input from the user
+num = int(input("Enter an integer: "))
+
+# Check if the number is a multiple of both 5 and 7
+if num % 5 == 0 and num % 7 == 0:
+    print(f"{num} is a multiple of both 5 and 7.")
+else:
+    print(f"{num} is not a multiple of both 5 and 7.")
+
+Output:-
+Enter an integer: 35
+35 is a multiple of both 5 and 7.
+
+6. Python program to display the given integer in a reverse manner.
+
+# Input from the user
+num = int(input("Enter an integer: "))
+
+# Initialize a variable to store the reversed number
+reversed_num = 0
+
+# Reverse the number
+while num > 0:
+    # Get the last digit of num
+    last_digit = num % 10
+    
+    # Add the last digit to reversed_num (shift it left)
+    reversed_num = (reversed_num * 10) + last_digit
+    
+    # Remove the last digit from num
+    num = num // 10
+
+# Display the reversed number
+print(f"The reversed number is: {reversed_num}")
+
+Output:- 
+Enter an integer: -5
+The reversed number is: 0
+
+7. Python program to find the geometric mean of n numbers.
+
+import math
+
+# Input from the user
+n = int(input("Enter the total number of values: "))
+
+# Initialize the product to 1
+product = 1
+
+# Input and multiply the values
+for i in range(n):
+    value = float(input(f"Enter value {i + 1}: "))
+    product *= value
+
+# Calculate the geometric mean
+geometric_mean = math.pow(product, 1/n)
+
+# Display the calculated geometric mean
+print(f"The geometric mean of the {n} values is: {geometric_mean:.4f}")
+
+Output:- 
+Enter the total number of values: 3
+Enter value 1: 5
+Enter value 2: 6
+Enter value 3: 7
+The geometric mean of the 3 values is: 5.9439
+
+
+8. Python program to find the sum of the digits of an integer using a while
+loop.
+
+# Input from the user
+num = int(input("Enter an integer: "))
+
+# Initialize a variable to store the sum of the digits
+sum_of_digits = 0
+
+# Use a while loop to extract and sum the digits
+while num > 0:
+    # Get the last digit of num
+    last_digit = num % 10
+    
+    # Add the last digit to the sum
+    sum_of_digits += last_digit
+    
+    # Remove the last digit from num
+    num = num // 10
+
+# Display the sum of the digits
+print(f"The sum of the digits is: {sum_of_digits}")
+
+Output:- 
+Enter an integer: 35
+The sum of the digits is: 8
+
+
+9. Python program to display all the multiples of 3 within the range 10 to 50
+
+# Define the range
+start = 10
+end = 50
+
+# Loop through the range and display multiples of 3
+print("Multiples of 3 within the range 10 to 50:")
+for number in range(start, end + 1):
+    if number % 3 == 0:
+        print(number)
+
+Output:- 
+Multiples of 3 within the range 10 to 50:
+12
+15
+18
+21
+24
+27
+30
+33
+36
+39
+42
+45
+48
+
+
+10. . Python program to display all integers within the range 100 -200 whose sum
+of digits is an even number.
+
+# Loop through the range 100 to 200 and display numbers with even digit sums
+print("Integers within the range 100 to 200 whose sum of digits is even:")
+for num in range(100, 201):
+    # Calculate the sum of digits
+    digit_sum = sum(map(int, str(num)))
+    
+    # Check if the sum of digits is even
+    if digit_sum % 2 == 0:
+        print(num)
+
+Output:-
+Integers within the range 100 to 200 whose sum of digits is even:
+101
+103
+105
+107
+109
+110
+112
+114
+116
+118
+121
+123
+125
+127
+129
+130
+132
+134
+136
+138
+141
+143
+145
+147
+149
+150
+152
+154
+156
+158
+161
+163
+165
+167
+169
+170
+172
+174
+176
+178
+181
+183
+185
+187
+189
+190
+192
+194
+196
+198
+200
+
+
+11. Python program to check whether the given integer is a prime number or not.
+
+import math
+
+# Input from the user
+num = int(input("Enter an integer: "))
+
+# Check if the number is prime
+is_prime = True
+
+# Handle special cases (0, 1, and negative numbers)
+if num <= 1:
+    is_prime = False
+else:
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+
+# Display the result
+if is_prime:
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is not a prime number.")
+
+Output:-
+Enter an integer: 5
+5 is a prime number.
+
+12. Python program to generate the prime numbers from 1 to N.
+
+# Input from the user
+N = int(input("Enter the upper limit N: "))
+
+# Initialize a list to store prime numbers
+prime_numbers = []
+
+# Loop through the range from 2 to N
+for num in range(2, N + 1):
+    is_prime = True
+    # Check if num is prime
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        prime_numbers.append(num)
+
+# Display the list of prime numbers
+print("Prime numbers from 1 to", N, "are:")
+print(prime_numbers)
+
+Output:-
+Enter the upper limit N: 6
+Prime numbers from 1 to 6 are:
+[2, 3, 5]
+
+
+13. . Python program to find the roots of a quadratic equation.
+
+
+import math
+
+# Input from the user
+a = float(input("Enter the coefficient a: "))
+b = float(input("Enter the coefficient b: "))
+c = float(input("Enter the coefficient c: "))
+
+# Calculate the discriminant
+discriminant = b**2 - 4*a*c
+
+# Check the nature of roots
+if discriminant > 0:
+    # Two real and distinct roots
+    root1 = (-b + math.sqrt(discriminant)) / (2*a)
+    root2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print(f"Two real and distinct roots: {root1} and {root2}")
+elif discriminant == 0:
+    # One real root (repeated)
+    root = -b / (2*a)
+    print(f"One real and repeated root: {root}")
+else:
+    # Complex roots
+    real_part = -b / (2*a)
+    imaginary_part = math.sqrt(abs(discriminant)) / (2*a)
+    print(f"Complex roots: {real_part} + {imaginary_part}i and {real_part} - {imaginary_part}i")
+ 
+Output:- 
+Enter the coefficient a: 10
+Enter the coefficient b: 20
+Enter the coefficient c: 25
+Complex roots: -1.0 + 1.224744871391589i and -1.0 - 1.224744871391589i
+
+14. Python program to print the numbers from a given number n till 0 using
+recursion.
+
+
+def print_numbers(n):
+    if n < 0:
+        return  # Base case: stop recursion when n is negative
+    print(n)
+    print_numbers(n - 1)  # Recursively print the next number
+
+# Input from the user
+n = int(input("Enter a number: "))
+
+# Call the recursive function to print numbers from n to 0
+print("Numbers from", n, "to 0:")
+print_numbers(n)
+ 
+Output:- 
+Enter a number: 6
+Numbers from 6 to 0:
+6
+5
+4
+3
+2
+1
+0
+
+15. Python program to find the factorial of a number using recursion
+
+def factorial(n):
+    if n == 0:
+        return 1  # Base case: factorial of 0 is 1
+    else:
+        return n * factorial(n - 1)
+
+# Input from the user
+n = int(input("Enter a non-negative integer: "))
+
+if n < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    result = factorial(n)
+    print(f"The factorial of {n} is {result}")
+
+Output:-
+Enter a non-negative integer: 8
+The factorial of 8 is 40320
+
+16. Python program to display the sum of n numbers using a list.
+
+# Input from the user for the number of values
+n = int(input("Enter the number of values you want to sum: "))
+
+# Initialize an empty list to store the values
+values = []
+
+# Input from the user for each value and add them to the list
+for i in range(n):
+    value = float(input(f"Enter value {i + 1}: "))
+    values.append(value)
+
+# Calculate the sum of the values using the built-in sum() function
+total = sum(values)
+
+# Display the sum of the values
+print(f"The sum of {n} values is: {total}")
+
+Output:-
+Enter the number of values you want to sum: 5
+Enter value 1: 12
+Enter value 2: 13
+Enter value 3: 15
+Enter value 4: 19
+Enter value 5: 20
+The sum of 5 values is: 79.0
+
+
+17. Python program to implement linear search.
+
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i  # Return the index if the target is found
+    return -1  # Return -1 if the target is not found
+
+# Input from the user for a list of numbers
+arr = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+
+# Input from the user for the target element to search
+target = int(input("Enter the element you want to search for: "))
+
+# Perform linear search
+result = linear_search(arr, target)
+
+# Display the result
+if result != -1:
+    print(f"{target} found at index {result}")
+else:
+    print(f"{target} not found in the list.")
+
+Output:- 
+Enter a list of numbers separated by spaces: 10
+Enter the element you want to search for: -4
+-4 not found in the list.
+
+18.  Python program to implement binary search.
+
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2  # Calculate the midpoint
+
+        if arr[mid] == target:
+            return mid  # Target found, return its index
+        elif arr[mid] < target:
+            left = mid + 1  # Discard the left half
+        else:
+            right = mid - 1  # Discard the right half
+
+    return -1  # Target not found in the array
+
+# Example usage
+arr = [1, 3, 5, 7, 9, 11, 13, 15]
+target = 7
+result = binary_search(arr, target)
+
+if result != -1:
+    print(f"Element {target} found at index {result}")
+else:
+    print(f"Element {target} not found in the array")
+
+Output:- 
+Element 7 found at index 3
+
+
+19. Python program to find the odd numbers in an array.
+
+# Input from the user for the array
+array = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+
+# Find and collect odd numbers
+odd_numbers = [num for num in array if num % 2 != 0]
+
+# Display the odd numbers
+print("Odd numbers in the array:", odd_numbers)
+
+Output:-
+Enter a list of numbers separated by spaces: 5
+Odd numbers in the array: [5]
+
+
+20. Python program to find the largest number in a list without using built-in functions.
+
+
+# Input from the user for the list of numbers
+numbers = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+
+# Initialize a variable to store the maximum number
+maximum = numbers[0]
+
+# Iterate through the list to find the maximum number
+for num in numbers:
+    if num > maximum:
+        maximum = num
+
+# Display the maximum number
+print("The largest number in the list is:", maximum)
+
+Output:-
+Enter a list of numbers separated by spaces: 8
+The largest number in the list is: 8
+
+21. Python program to insert a number to any position in a list.
+
+# Input from the user for the list of numbers
+numbers = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+
+# Input from the user for the number to insert
+number_to_insert = int(input("Enter the number to insert: "))
+
+# Input from the user for the position to insert the number
+position = int(input(f"Enter the position (0 to {len(numbers)}) to insert the number: "))
+
+# Check if the position is within a valid range
+if position < 0 or position > len(numbers):
+    print("Invalid position. The position should be between 0 and", len(numbers))
+else:
+    # Insert the number at the specified position
+    numbers.insert(position, number_to_insert)
+
+    # Display the updated list
+    print("Updated list:", numbers)
+
+Output:- 
+Enter a list of numbers separated by spaces: 5
+Enter the number to insert: 2
+Enter the position (0 to 1) to insert the number: 1
+Updated list: [5, 2]
+
+22. Python program to delete an element from a list by index.
+
+my_list = [10, 20, 30, 40, 50]
+
+# Index of the element you want to delete
+index_to_delete = 2
+
+# Check if the index is valid
+if 0 <= index_to_delete < len(my_list):
+    # Use the pop() method to remove the element at the specified index
+    removed_element = my_list.pop(index_to_delete)
+    print(f"Removed element: {removed_element}")
+else:
+    print("Invalid index. Element not removed.")
+
+# Print the updated list
+print("Updated list:", my_list)
+
+Output:-
+Removed element: 30
+Updated list: [10, 20, 40, 50]
+
+23. Python program to check whether a string is palindrome or not.
+
+# Input from the user
+string = input("Enter a string: ")
+
+# Remove spaces and convert to lowercase for case-insensitive comparison
+cleaned_string = string.replace(" ", "").lower()
+
+# Check if the cleaned string is equal to its reverse
+if cleaned_string == cleaned_string[::-1]:
+    print("The entered string is a palindrome.")
+else:
+    print("The entered string is not a palindrome.")
+
+Output:-
+Enter a string: 6
+The entered string is a palindrome.
+
+24. Python program to implement matrix addition.
+
+X = [[12,7,3],
+      [4 ,5,6],
+      [7 ,8,9]]
+
+Y = [[5,8,1],
+      [6,7,3],
+      [4,5,9]]
+
+result = [[0,0,0],
+             [0,0,0],
+             [0,0,0]]
+
+# iterate through rows
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[i][j] = X[i][j] + Y[i][j]
+
+for r in result:
+   print(r)
+
+Output:- 
+[17, 15, 4]
+[10, 12, 9]
+[11, 13, 18]
+
+
+25. Python program to implement matrix multiplication.
+
+# 3x3 matrix
+X = [[12,7,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+# 3x4 matrix
+Y = [[5,8,1,2],
+    [6,7,3,0],
+    [4,5,9,1]]
+# result is 3x4
+result = [[0,0,0,0],
+         [0,0,0,0],
+         [0,0,0,0]]
+
+# iterate through rows of X
+for i in range(len(X)):
+   # iterate through columns of Y
+   for j in range(len(Y[0])):
+       # iterate through rows of Y
+       for k in range(len(Y)):
+           result[i][j] += X[i][k] * Y[k][j]
+
+for r in result:
+   print(r)
+
+Output:- 
+[114, 160, 60, 27]
+[74, 97, 73, 14]
+[119, 157, 112, 23]
+
+26. Python program to check leap year.
+
+# Input from the user for the year
+year = int(input("Enter a year: "))
+
+# Check if it's a leap year
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+ 
+Output:- 
+
+Enter a year: 2005
+2005 is not a leap year.
+
+27. Python program to find the Nth term in a Fibonacci series using recursion
+
+def fibonacci(n):
+    if n <= 0:
+        return "Invalid input"  # Fibonacci series is defined for positive integers
+    elif n == 1:
+        return 0  # The first term of the series
+    elif n == 2:
+        return 1  # The second term of the series
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+# Input from the user for the term number
+n = int(input("Enter the term number (N) in the Fibonacci series: "))
+
+# Calculate and display the Nth term
+result = fibonacci(n)
+if result == "Invalid input":
+    print(result)
+else:
+    print(f"The {n}th term in the Fibonacci series is: {result}")
+
+Output:- 
+
+Enter the term number (N) in the Fibonacci series: 6
+The 6th term in the Fibonacci series is: 5
+
+28. Python program to print Fibonacci series using iteration.
+
+# Input from the user for the number of terms in the series
+n = int(input("Enter the number of terms you want in the Fibonacci series: "))
+
+# Initialize the first two terms
+term1 = 0
+term2 = 1
+
+# Check if the user wants to print the series
+if n <= 0:
+    print("Invalid input. Please enter a positive integer.")
+elif n == 1:
+    print(f"Fibonacci series with {n} term(s): {term1}")
+else:
+    print("Fibonacci series:")
+    print(term1, term2, end=" ")
+
+    # Generate and print the remaining terms in the series
+    for _ in range(2, n):
+        next_term = term1 + term2
+        print(next_term, end=" ")
+        term1, term2 = term2, next_term
+    print()
+ 
+Output:-
+Enter the number of terms you want in the Fibonacci series: 6
+Fibonacci series:
+0 1 1 2 3 5 
+
+29. Python program to print all the items in a dictionary.
+
+data = {'vikash': [{'subject1': "java", 'marks': 98},  
+                   {'subject2': "PHP", 'marks': 89}], 
+        'prashant': [{'subject1': "java", 'marks': 78},  
+                  {'subject2': "PHP", 'marks': 79}]} 
+
+for key, values in data.items(): 
+    for i in values: 
+        print(key, " : ", i) 
+
+Output :-
+vikash  :  {'subject1': 'java', 'marks': 98}
+vikash  :  {'subject2': 'PHP', 'marks': 89}
+prashant  :  {'subject1': 'java', 'marks': 78}
+prashant  :  {'subject2': 'PHP', 'marks': 79}
+
+30. Python program to implement a calculator to do basic operations.
+
+n1 = float(input("Enter the First Number: "))
+n2 = float(input("Enter the Second Number: "))
+
+#addition
+
+print("{} + {} = ".format(n1, n2))
+print(n1 + n2)
+
+#subtraction
+
+print("{} - {} = ".format(n1, n2))
+print(n1 - n2)
+
+#multiplication
+
+print("{} * {} = ".format(n1, n2))
+print(n1 * n2)
+
+#division
+
+print("{} / {} = ".format(n1, n2))
+print(n1 / n2)
+
+Output:-
+
+Enter the First Number: 4
+Enter the Second Number: 5
+4.0 + 5.0 = 
+9.0
+4.0 - 5.0 = 
+-1.0
+4.0 * 5.0 = 
+20.0
+4.0 / 5.0 = 
+0.8
+
+
+
+
+
+
+
